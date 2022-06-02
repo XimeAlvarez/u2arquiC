@@ -1,0 +1,160 @@
+<h1 style="text-align: right;"><span style="background-color: #ccffff;"><img style="float: left;" src="https://correos.saltillo.tecnm.mx/images/its.png" alt="its logo" width="191" height="176" /></span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Logo-TecNM-2017.png/640px-Logo-TecNM-2017.png" alt="" width="251" height="155" /></h1>
+<h4 style="text-align: right;"><span style="color: #99cc00;">Arquitectura de computadoras</span></h4>
+<h4 style="text-align: right;"><span style="color: #99cc00;">Ximena Carolina Alvarez moreno</span></h4>
+<h4 style="text-align: right;"><span style="color: #99cc00;"><a style="color: #99cc00;" href="mailto:ximenalvarez29.m@gmail.com">ximenalvarez29.m@gmail.com</a></span></h4>
+<h4 style="text-align: right;"><span style="color: #99cc00;">17:00 HRS</span></h4>
+
+
+<h1 style="text-align: center;">Unidad 2</h1>
+<h2>2.1 Organizacion del procesador</h2>
+<p style="text-align: justify;">La Unidad de Procesamiento (CPU) controla el funcionamiento del computador y lleva a cabo sus funciones de procesamiento de datos. Frecuentemente se le llama procesador.</p>
+<p style="text-align: justify;">Un procesador, incluye tanto registros visibles por el usuario como registros de control/estado. Los registros visibles por el usuario pueden ser de uso general o tener una utilidad especial, mientras que los registros de control y estado se usan para controlar el funcionamiento del procesador, un claro ejemplo es el contador de programa.</p>
+<p style="text-align: justify;">Lleva a cabo una gran variedad de:</p>
+<ul style="text-align: justify;">
+<li>C&aacute;lculos</li>
+<li>Comparaciones num&eacute;ricas</li>
+<li>Transferencias de datos como respuesta a las peticiones de los programas que est&aacute;n siendo ejecutados en memoria.</li>
+</ul>
+<p style="text-align: justify;">La CPU controla las operaciones b&aacute;sicas del ordenador enviando y recibiendo se&ntilde;ales de control, direcciones de memoria y datos de un lugar a otro de la computadora a trav&eacute;s de un grupo de canales llamados BUS.</p>
+<p style="text-align: justify;">La Unidad Central de Proceso est&aacute; constituida internamente por:</p>
+<ul style="text-align: justify;">
+<li>La Unidad de Control</li>
+<li>Unidad Aritm&eacute;tico-L&oacute;gica</li>
+</ul>
+<p style="text-align: justify;"><span class="subtitulo">Unidad Aritm&eacute;tico-L&oacute;gica (ALU)</span></p>
+<p style="text-align: justify;">Recibe los datos sobre los que efect&uacute;a operaciones de c&aacute;lculo y comparaciones. Toma decisiones l&oacute;gicas (determina si una afirmaci&oacute;n es correcta o falsa mediante reglas del algebra de Boole) y devuelve luego el resultado. Todo ello bajo supervisi&oacute;n de la unidad de control.</p>
+<p style="text-align: justify;"><span class="subtitulo">La Unidad de Control</span></p>
+<p style="text-align: justify;">La unidad de control le indica al resto del sistema como llevar a cabo las instrucciones de un programa. Comanda las se&ntilde;ales electr&oacute;nicas entre la memoria y la unidad aritm&eacute;tico-l&oacute;gica, y entre el CPU y los dispositivos de entrada y salida. Para ejecutar cualquier programa, cada comando del mismo se desglosa en instrucciones.</p>
+<p style="text-align: justify;">Los procesadores utilizan la segmentaci&oacute;n de instrucciones para acelerar la ejecuci&oacute;n. La segmentaci&oacute;n de cauce se puede dividir en ciclo de instrucci&oacute;n en varias etapas separadas que operan secuencialmente, tales como la captaci&oacute;n de instrucci&oacute;n, decodificaci&oacute;n de instrucci&oacute;n, c&aacute;lculo de direcciones de operando, ejecuci&oacute;n de instrucci&oacute;n y estructura del operando resultado.</p>
+<p style="text-align: justify;">A continuaci&oacute;n se muestra c&oacute;mo se organiza un procesador, para esto se tiene que considerar los siguientes requisitos:</p>
+<p style="text-align: justify;">&nbsp; &nbsp;Captar instrucciones: el procesador lee una instrucci&oacute;n de memoria (registro, cache o memoria principal).</p>
+<p style="text-align: justify;">&nbsp; &nbsp;Interpretar instrucci&oacute;n: la instrucci&oacute;n se codifica para determinar qu&eacute; acci&oacute;n es necesario.</p>
+<p style="text-align: justify;">&nbsp; &nbsp;Captar datos: la ejecuci&oacute;n de una instrucci&oacute;n puede exigir leer datos de memoria o de un m&oacute;dulo de E/S.</p>
+<p style="text-align: justify;">&nbsp; &nbsp;Procesar datos: la ejecuci&oacute;n de una instrucci&oacute;n puede exigir llevar a cabo alguna operaci&oacute;n aritm&eacute;tica o l&oacute;gica con los datos.</p>
+<p style="text-align: justify;">Escribir datos: los resultados de una ejecuci&oacute;n pueden exigir escribir datos en la memoria o en el m&oacute;dulo de E/S.</p>
+<p style="text-align: justify;">Para hacer estas cosas, el procesador necesita almacenar instrucciones y datos temporalmente mientras una instrucci&oacute;n est&aacute; ejecut&aacute;ndose, en otras palabras el procesador necesita una peque&ntilde;a memoria interna, tambi&eacute;n llamados registros.</p>
+<p style="text-align: justify;"><img src="http://4.bp.blogspot.com/-ZrLK6wBMang/VU2ZU4x5a9I/AAAAAAAAACM/oXAhpo2Cg5Q/s1600/8.png" alt="" width="459" height="358" /></p>
+<h2 style="text-align: justify;">2.2 Estructura de registros</h2>
+<p style="text-align: center;"><span style="color: #0000ff;"><strong>&iquest;Qu&eacute; es un registro?</strong></span></p>
+<p style="text-align: justify;">Un registro es una memoria que esta ubicada en el procesador y se encuentra en el nivel m&aacute;s alto en la jerarqu&iacute;a de memoria, por lo tanto tiene una alta velocidad pero con poca capacidad para almacenar datos que va desde los 4 bits hasta los 64 bits dependiendo del procesador que se utilice. Los datos que almacena son los que se usan frecuentemente.</p>
+<p id="regVis" style="text-align: justify;">Tambi&eacute;n hay tipos de registros y se dividen en dos categor&iacute;as:</p>
+<p style="text-align: justify;"><span style="background-color: #ffff99;"><strong>2.2.1 Registros visibles al usuario</strong></span></p>
+<p style="text-align: justify;">Son aquellos que pueden ser referenciado por medio del lenguaje maquina que ejecuta la CPU, los registro que normalmente disponibles son:</p>
+<ul>
+<li style="text-align: justify;">Registros de prop&oacute;sito general, son aquellos que pueden guardar tanto datos como direcciones</li>
+<li style="text-align: justify;">Registro de datos, que pueden ser asignados por el programador a diversas funciones. En algunos casos son de prop&oacute;sito general y pueden ser empleados por cualquier instrucci&oacute;n de m&aacute;quina que lleve a cabo operaciones sobre los datos.</li>
+<li id="regCon" style="text-align: justify;">Registros de direcciones, contienen direcciones en la memoria principal de datos y este tipo de registro puede ser de prop&oacute;sito general o estar a un modo espec&iacute;fico de direccionamiento.</li>
+<li style="text-align: justify;">C&oacute;digos de condici&oacute;n, tambi&eacute;n conocidos como indicadores o flags. Los c&oacute;digos de condici&oacute;n, son bits activados por el procesador como resultado de determinadas operaciones</li>
+</ul>
+<p><span style="background-color: #ffff99;"><strong>2.2.2 Registros de control y estado</strong></span></p>
+<p style="text-align: justify;">Se utilizan para controlar las operaciones del procesador, la mayor parte de estos registros no son visibles al usuario y algunos pueden ser accesibles a las instrucciones de maquina ejecutadas en un modo de control.</p>
+<p style="text-align: justify;">Los registros utilizados son los siguientes:</p>
+<ul>
+<li style="text-align: justify;">Registro de direcciones de memoria (MAR), el cual contiene la direcci&oacute;n en donde se efectuar&aacute; la pr&oacute;xima lectura o escritura de datos. El numero de direcciones depende del tama&ntilde;o de la MAR.</li>
+<li style="text-align: justify;">Registro de datos de memoria (MBR), contiene los datos que van a ser escritos en la memoria o los que fueron le&iacute;dos en ella. Registro de direcciones de entrada y salida (I/O AR), especifica al dispositivo ya sea de entrada o salida</li>
+<li style="text-align: justify;">Registro de datos de entrada y salida (I/O BR), es una &aacute;rea temporal en donde se lleva a cabo el intercambio de datos entre el procesador y el dispositivo de entrada y salida que esta especificado en IOAR.</li>
+<li style="text-align: justify;">Registro de instrucciones (IR), contiene la direcci&oacute;n de la siguiente instrucci&oacute;n que se va a ejecutar.</li>
+<li id="organ" style="text-align: justify;">Palabras de estado del programa (PSW), contiene c&oacute;digos de condici&oacute;n junto con otras informaciones de estado como el signo, acarro, desbordamiento, entre otras.</li>
+</ul>
+<p><span style="background-color: #ffff99;"><strong>2.2.3 Ejemplos de organizacion de registros de CPU reales</strong></span></p>
+<p style="text-align: justify;">En alg&uacute;n dise&ntilde;o concreto de procesador es posible encontrar otros registros relativos a estado y control. Puede existir un puntero a un bloque de memoria que contenga informaci&oacute;n de estado adicional (por ejemplo, bloques de control de procesos). En las m&aacute;quinas que usan interrupciones vectorizadas puede existir un registro de vector de interrupci&oacute;n. Si se utiliza una pila para llevar a cabo ciertas funciones (por ejemplo, llamada a subrutina), se necesita un puntero de pila del sistema. En un sistema de memoria virtual se usa un puntero a la tabla de p&aacute;ginas.Por &uacute;ltimo, pueden emplearse registros para el control de operaciones de E/S. En el dise&ntilde;o de la organizaci&oacute;n de los registros de control y estado entran en juego varios factores.</p>
+<p style="text-align: justify;">Una cuesti&oacute;n primordial es el soporte del sistema operativo. Algunos tipos de informaci&oacute;n de control son de utilidad espec&iacute;fica para el sistema operativo. Si el dise&ntilde;ador del procesador posee una comprensi&oacute;n funcional del sistema operativo que se va a utilizar, la organizaci&oacute;n de los registros puede adaptarse hasta cierto punto a ese sistema operativo.</p>
+<p style="text-align: justify;">Otra decisi&oacute;n importante en el dise&ntilde;o es la distribuci&oacute;n de informaci&oacute;n de control entre registros y memoria. Es frecuente dedicar los primeros (m&aacute;s bajos) pocos cientos o miles de palabras de memoria para fines de control. El dise&ntilde;ador debe decidir cu&aacute;nta informaci&oacute;n de control debiera estar en registros y cu&aacute;nta en memoria. Se presenta el compromiso habitual entre coste y velocidad.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<h2 style="text-align: justify;">2.3 Ciclo de instruccion</h2>
+<p style="text-align: justify;">Ciclo de la instrucci&oacute;n.</p>
+<p id="fetch-code" style="text-align: justify;">El Ciclo Instrucci&oacute;n cuenta con dos fases, la primera es la obtenci&oacute;n (b&uacute;squeda) y la segunda es la fase de ejecuci&oacute;n:</p>
+<h3><span style="background-color: #ffff99;">2.3.1 Ciclo Fetch-Decode-Execute</span></h3>
+<p style="text-align: justify;">Un ciclo de instrucci&oacute;n (tambi&eacute;n llamado ciclo de fetch-and-execute o ciclo de fetch-decode-execute en ingl&eacute;s) es el per&iacute;odo que tarda la unidad central de procesamiento (CPU) en ejecutar una instrucci&oacute;n de lenguaje m&aacute;quina.</p>
+<p id="segmentacion" style="text-align: justify;">Comprende una secuencia de acciones determinada que debe llevar a cabo el CPU para ejecutar cada instrucci&oacute;n en un programa. Cada instrucci&oacute;n del juego de instrucciones de un CPU puede requerir diferente n&uacute;mero de ciclos de instrucci&oacute;n para su ejecuci&oacute;n. Un ciclo de instrucci&oacute;n est&aacute; formado por uno o m&aacute;s ciclos m&aacute;quina. Para que cualquier sistema de proceso de datos basado en microprocesador (por ejemplo un ordenador o computadora personal) o microcontrolador (por ejemplo un reproductor de MP3) realice una tarea (programa) primero debe buscar cada instrucci&oacute;n en la memoria principal y luego ejecutarla.</p>
+<h3 style="text-align: justify;"><span style="color: #000000; background-color: #ffff99;">2.3.2 Segmentacion de instrucciones</span></h3>
+<p style="text-align: justify;">El objetivo de la segmentaci&oacute;n es ejecutar simult&aacute;neamente diferentes etapas de distintas instrucciones, lo cual permite aumentar el rendimiento del procesador sin tener que hacer m&aacute;s r&aacute;pidas todas las unidades del procesador (ALU, UC, buses, etc.) y sin tener que duplicarlas.</p>
+<p style="text-align: justify;">La divisi&oacute;n de la ejecuci&oacute;n de una instrucci&oacute;n en diferentes etapas se debe realizar de tal manera que cada etapa tenga la misma duraci&oacute;n, generalmente un ciclo de reloj.</p>
+<p style="text-align: justify;">Es necesario a&ntilde;adir registros para almacenar los resultados intermedios entre las diferentes etapas, de modo que la informaci&oacute;n generada en una etapa est&eacute; disponible para la etapa siguiente.</p>
+<p style="text-align: justify;">La segmentaci&oacute;n es como una cadena de montaje. En cada etapa de la cadena se lleva a cabo una parte del trabajo total y cuando se acaba el trabajo de una etapa.</p>
+<p style="text-align: justify;">El producto pasa a la siguiente y as&iacute; sucesivamente hasta llegar al final.</p>
+<p id="conInst" style="text-align: justify;">Si hay N etapas, se puede trabajar sobre N productos al mismo tiempo y, si la cadena est&aacute; bien equilibrada, saldr&aacute; un producto acabado en el tiempo que se tarda en llevar a cabo una de las etapas. De esta manera, no se reduce el tiempo que se tarda en hacer un producto, sino que se reduce el tiempo total necesario para hacer una determinada cantidad de productos porque las operaciones de cada etapa se efect&uacute;an simult&aacute;neamente.</p>
+<h3 style="text-align: justify;"><span class="subtitulo" style="background-color: #ffff99;">2.3.3 Conjunto de instrucciones.</span></h3>
+<p style="text-align: justify;">La segmentaci&oacute;n de instrucciones es similar al uso de una cadena de montaje en una f&aacute;brica de manufacturaci&oacute;n. En las cadenas de montaje, el producto pasa a trav&eacute;s de varias etapas de producci&oacute;n antes de tener el producto terminado. Cada etapa o segmento de la cadena est&aacute; especializada en un &aacute;rea espec&iacute;fica de la l&iacute;nea de producci&oacute;n y lleva a cabo siempre la misma actividad. Esta tecnolog&iacute;a es aplicada en el dise&ntilde;o de procesadores eficientes.</p>
+<p style="text-align: justify;">A estos procesadores se les conoce como pipeline processors. Estos est&aacute;n compuestos por una lista de segmentos lineales y secuenciales en donde cada segmento lleva a cabo una tarea o un grupo de tareas computacionales. Los datos que provienen del exterior se introducen en el sistema para ser procesados.</p>
+<p style="text-align: justify;">La computadora realiza operaciones con los datos que tiene almacenados en memoria, produce nuevos datos o informaci&oacute;n para uso externo.</p>
+<p style="text-align: justify;">Las arquitecturas y los conjuntos de instrucciones se pueden clasificar considerando aspectos posibles:</p>
+<ul style="text-align: justify;">
+<li>Almacenamiento de operandos en la CPU: d&oacute;nde se ubican los operandos aparte de la memoria.</li>
+<li>N&uacute;mero de operandos expl&iacute;citos por instrucci&oacute;n: cu&aacute;ntos operandos se expresan en forma expl&iacute;cita en una instrucci&oacute;n t&iacute;pica. Como son 0,1,2,3.</li>
+<li>Posici&oacute;n del operando: Todos en los registros internos de la CPU. C&oacute;mo se especifica la direcci&oacute;n de memoria (modos de direccionamiento disponible.</li>
+<li>Operaciones: Qu&eacute; operaciones est&aacute;n disponibles en el conjunto de instrucciones.</li>
+<li id="direc">Tipo y tama&ntilde;o de operandos y c&oacute;mo se especifican.</li>
+</ul>
+<h3 style="text-align: justify;"><span class="subtitulo" style="background-color: #ffff99;">2.3.4. Modos de direccionamiento y formatos.</span></h3>
+<p style="text-align: justify;">Distintas formas que tiene la arquitectura para especificar la ubicaci&oacute;n de los operandos.</p>
+<p style="text-align: justify;"><span class="textoGral">Objetivos:</span></p>
+<ul style="text-align: justify;">
+<ul>
+<li>Reducir el n&uacute;mero de bits para especificar un operando en memoria. - Dar soporte a las estructuras de datos de alto nivel.</li>
+</ul>
+</ul>
+<p style="text-align: justify;">Pueden ser:</p>
+<ul style="text-align: justify;">
+<ul>
+<li>Para datos, sobre los que opera la instrucci&oacute;n.</li>
+<li>Para instrucciones, especifica la direcci&oacute;n de la siguiente instrucci&oacute;n a ejecutar (en instrucciones de control).</li>
+</ul>
+</ul>
+<p style="text-align: justify;"><span class="subtitulo">Formatos de direccionamiento</span></p>
+<p style="text-align: justify;">D&oacute;nde puede estar un operando:</p>
+<ul>
+<li style="text-align: justify;">En la propia instrucci&oacute;n</li>
+<li style="text-align: justify;">En un registro</li>
+<li style="text-align: justify;">En memoria</li>
+</ul>
+<p><strong><span class="textoGral" style="background-color: #ccffff;">Direccionamiento por registro.</span></strong></p>
+<p>El campo de direcci&oacute;n especifica un registro donde est&aacute; el operando</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/DireccionamientoRegistro.png/220px-DireccionamientoRegistro.png" alt="" width="338" height="321" /></p>
+<p>&nbsp;</p>
+<p><span style="background-color: #ccffff;"><strong><span class="textoGral">Direccionamiento Inmediato.</span></strong></span></p>
+<p>El operando est&aacute; en la instrucci&oacute;n.</p>
+<p><img src="http://4.bp.blogspot.com/-ghK1mgbLKYY/VX3p64N7ubI/AAAAAAAABgU/V01sD3wvmn4/s1600/hhhh.png" alt="" width="505" height="157" /></p>
+<p>&nbsp;</p>
+<p><span style="background-color: #ccffff;"><strong><span class="textoGral">Direccionamiento directo.</span></strong></span></p>
+<p>El campo de direcci&oacute;n contiene la direcci&oacute;n efectiva del operando.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DireccionamientoDirecto.png/220px-DireccionamientoDirecto.png" alt="" width="401" height="342" /></p>
+<p>&nbsp;</p>
+<p><span style="background-color: #ccffff;"><strong><span class="textoGral">Direccionamiento indirecto por registro.</span></strong></span></p>
+<p>Se especifica un registro donde est&aacute; la direcci&oacute;n del operando.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/DireccionamientoIndirectoConRegistro.png/220px-DireccionamientoIndirectoConRegistro.png" alt="" width="400" height="291" /></p>
+<p>&nbsp;</p>
+<p><span style="background-color: #ccffff;"><strong><span class="textoGral">Direccionamiento indirecto por memoria.</span></strong></span></p>
+<p>El campo de direcciones contiene la direcci&oacute;n de una palabra donde est&aacute; la direcci&oacute;n del operando.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/DireccionamientoIndirecto.png/220px-DireccionamientoIndirecto.png" alt="" width="438" height="374" /></p>
+<p>&nbsp;</p>
+<p><span style="background-color: #ccffff;"><strong><span class="textoGral">Direccionamiento base + desplazamiento.</span></strong></span></p>
+<p>Combina posibilidades del directo (facilidad de uso) y del indirecto por registro (menos bits para especificar direcci&oacute;n). Habr&aacute; que especificar un registro y un valor. La suma del contenido del registro y el valor es la direcci&oacute;n del operando.</p>
+<p><img src="https://tareasuniversitarias.com/wp-content/uploads/2012/12/Direccionamiento-base-m%C3%A1s-desplazamiento.jpg" alt="" width="394" height="220" /></p>
+<p>&nbsp;</p>
+<p><span style="background-color: #ccffff;"><strong><span class="textoGral">Direccionamiento indexado.</span></strong></span></p>
+<p>La direcci&oacute;n del operando es la suma de dos registros.</p>
+<p><img src="https://tareasuniversitarias.com/wp-content/uploads/2012/12/Direccionamiento-indexado.jpg" alt="" width="469" height="254" /></p>
+<p>&nbsp;</p>
+<h2>2.4 Casos de estudio de CPU reales</h2>
+<p><span style="background-color: #cc99ff;"><strong><span class="textoGral">Intel 8086:</span></strong></span></p>
+<p style="text-align: justify;">Los registros del procesador, se usaban para contener los datos con que se estaba trabajando puesto que el acceso a los registros era mucho m&aacute;s r&aacute;pido que los accesos a la memoria. Se podian realizar operaciones aritm&eacute;ticas y l&oacute;gicas, comparaciones, entre otras. Los modos del 8086 eran indirectos por registro, indexados o directos por registro.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://simplecore.intel.com/newsroom-es-lar/wp-content/uploads/sites/15/2018/06/Intel-8086-1-1024x821.jpg" alt="" width="589" height="472" /></p>
+<p><span style="background-color: #cc99ff;"><strong><span class="textoGral">Motorola 68000:</span></strong></span></p>
+<p style="text-align: justify;">El mismo direccionamiento llevaba impl&iacute;cito el tipo de registro sobre el que trabajaba (direcciones o datos). Estuvo basado en dos bancos de 8 registros de 32 bits. Un banco es de datos (Dn) y el otro de punteros (An). Adem&aacute;s conten&iacute;a un contador de programa de 32 bits y un registro de estado de 16 bits.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://upload.wikimedia.org/wikipedia/commons/2/28/XC68000.agr.jpg" alt="motorola68000" width="1002" height="388" /></p>
+<p><span style="background-color: #cc99ff;"><strong><span class="textoGral">Intel 80386:</span></strong></span></p>
+<p style="text-align: justify;">Para este microprocesador existi&oacute; un modo nuevo que requer&iacute;a un byte adicional denominado SIB (escala, &iacute;ndice, base) que se a&ntilde;ad&iacute;a al byte de operandos, es &uacute;til para direccionar elementos de vectores de longitudes diferentes en bucles. Era una alternativa a los modos autoindexados que esta m&aacute;quina no soportaba</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Ic-photo-intel-A80386DX-33-IV-%28386DX%29.png" alt="" width="468" height="468" /></p>
+
+
+<h2 style="text-align: center;"><em><strong><span class="textoClaro">Instituto Tecnol&oacute;gico de Saltillo<br /></span><span class="textoPeque&ntilde;o">Blvd. Venustiano Carranza #2400, Col. Tecnol&oacute;gico, Saltillo, Coahuila, M&eacute;xico C.P. 25280.<br />Contacto Email: contacto@tecnm.mx.<br />Tel&eacute;fono: 844 4020840.</span></strong></em></h2>
+<h2 style="text-align: center;"><a href="https://www.facebook.com/TecNMcampusSaltillo/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/800px-Facebook_logo_%28square%29.png" width="80px" height="80px" /></a> <a href="http://its.mx">
+ <img
+href="https://www.youtube.com/channel/UCf4pqcU7cOI8emhhoeYoVVw"><img src="https://seeklogo.com/images/Y/youtube-2017-icon-logo-D1FE045118-seeklogo.com.png" width="110px" height="80px" /></a> 
+  
+  <img
+href="https://twitter.com/TecNM_MX"><img src="https://static.vecteezy.com/system/resources/previews/002/534/045/original/social-media-twitter-logo-blue-isolated-free-vector.jpg" width="100px" height="90px" /></a> 
+  
+ <a href="http://its.mx"><img
+src="https://w7.pngwing.com/pngs/428/279/png-transparent-computer-icons-web-page-identity-angle-text-logo.png" width="85px" height="85px" /></a> <br /><img src="https://www.tijuana.tecnm.mx/wp-content/uploads/2017/08/Tecnologico-Nacional-de-Mexico-1568x757.jpg" alt="tecnm" width="131" height="64" /></h2>
